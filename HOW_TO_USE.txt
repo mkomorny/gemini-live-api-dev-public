@@ -1,0 +1,45 @@
+HOW TO USE: gemini-live-api-dev
+====================================
+
+PURPOSE
+  Build and migrate high-performance, real-time, bidirectional audio, video,
+  and text streaming applications using the Gemini Live API over WebSockets.
+
+CAPABILITIES
+  - Implement bidirectional audio/video/text streaming using google-genai (Python) or @google/genai (JS/TS).
+  - Use and configure Gemini 3.8 Live models (gemini-3.8-live, gemini-3.8-live-extended-thinking).
+  - Configure background reasoning (thinking_level, non-blocking tools, and interaction_status tracking).
+  - Implement live streaming translation (gemini-3.5-live-translate-preview) and live transcription (gemini-3.5-transcribe-live).
+  - Manage real-time sessions: client-side Hybrid VAD (audioStreamEnd), context window compression, session resumption, and interruption signals.
+
+USE CASES
+  - "How do I build a real-time voice assistant with Gemini 3.8?"
+  - Migrating from deprecated SDKs or older Live API models (e.g. gemini-2.0-flash-live-001) to gemini-3.8-live.
+  - "How can I make my voice agent perform complex background reasoning while speaking fillers?"
+  - Building low-latency streaming transcription or speech-to-speech translation tools.
+
+IDEAS
+  - Integrate Live API with partner tools like LiveKit, Pipecat, Fishjam, or Stream.
+  - Implement hybrid voice activity detection (VAD) on the client side to reduce latency.
+  - Create secure client-side apps using Ephemeral Tokens for serverless authentication.
+
+PROMPTS YOU CAN PASTE
+  How do I set up a Python WebSocket client with gemini-3.8-live?
+
+  Write a JavaScript example showing how to connect to gemini-3.8-live-extended-thinking with thinking_level set to low and non-blocking tools.
+
+  What are the key changes and checklists when migrating from gemini-2.0-flash-live to gemini-3.8-live?
+
+  How do I handle the 'interrupted' signal and correctly manage audio queues on client side?
+
+  Provide a complete TypeScript example using @google/genai to handle real-time audio and video input.
+
+EXAMPLE FLOW
+  You:  How do I write a basic Node.js connection for the Live API?
+  Model: [Provides a complete JavaScript setup using @google/genai, showing connection initialization, sending raw PCM audio, handling message events, and clearing playback queues on interruption]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Setup simple real-time voice chat (Python/TypeScript)
+  2. Implement background reasoning (extended thinking) with non-blocking tools
+  3. Migrate a legacy Live API integration to Gemini 3.8 Live
+  4. Build streaming translation or transcription flows
